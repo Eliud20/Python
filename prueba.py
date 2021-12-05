@@ -9,7 +9,8 @@ raiz.geometry("650x450")
 bot = Button(raiz, text="Hola")
 bot.place(x=100, y=50)
 
-#raiz.mainloop()
+# raiz.mainloop()
+
 
 def worker():
     """funcion que realiza el trabajo en el thread"""
@@ -18,8 +19,9 @@ def worker():
         tm.sleep(1)
     return
 
+
 t = th.Thread(target=worker)
 t1 = th.Thread(target=raiz.mainloop())
 
-t1.start()
-t.start()
+t1.run()
+t.run()
